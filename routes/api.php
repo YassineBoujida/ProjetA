@@ -23,5 +23,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('cities','CityController@store');
 Route::post('delivery-times','Delivery_timeController@store');
 Route::post('cities/{city_id}/delivery-times','Delivery_timeController@storeDeliveryTimeAndCity');
-Route::post('cities/{city_id}/delivery-times/exclusions','ExclusionController@store');
+Route::post('cities/delivery-times/exclusions','ExclusionController@store');
 Route::get('cities/{city_id}/delivery-dates-times/{number_of_days}','Delivery_timeController@getAvailableDateDelivery');
